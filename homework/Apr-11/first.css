@@ -1,0 +1,88 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#field {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    position: relative;
+}
+#ball {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    transition: top 0.3s ease, left 0.3s ease;
+}
+.el_field {
+    border: 10px solid white;
+    box-sizing: border-box;
+
+}
+#square {
+    width: 90%;
+    height: 80%;
+    border: 10px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+#lil_square {
+        margin-left: -10px;
+        width: 100px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+#lil_square2 {
+        margin-right: -10px;
+        width: 100px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+    }
+#lin {
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+#circle {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+}
+    #big_square {
+        margin-left: -10px;
+        position: relative;
+        width: 150px;
+        height: 300px;
+        float: inline-start;
+        top: 25%;
+    }
+    #big_square2 {
+        margin-right: -10px;
+        position: relative;
+        width: 150px;
+        height: 300px;
+        float: inline-end;
+        top: 25%;
+    }
