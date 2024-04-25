@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>первое задание</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    #field {
+        width: 100%;
+        height: 100%;
+        background-color: green;
+        position: relative;
+    }
+    #ball {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+        transition: top 0.3s ease, left 0.3s ease;
+    }
+    .el_field {
+        border: 7px solid white;
+        box-sizing: border-box;
+
+    }
+    #square {
+        width: 90%;
+        height: 80%;
+        border: 10px solid white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+    }
+    #lil_square {
+        margin-left: -10px;
+        width: 100px;
+            height: 200px;
+            position: absolute;
+            top: 55%;
+            left: 0;
+            transform: translate(0, -50%);
+        }
+    #lil_square2 {
+            margin-right: -10px;
+            width: 100px;
+            height: 200px;
+            position: absolute;
+            top: 55%;
+            right: 0;
+            transform: translate(0, -50%);
+        }
+    #lin {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background-color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    }
+    #circle {
+        width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+    }
+    #big_square {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        float: inline-start;
+        top: 30%;
+    }
+    #big_square2 {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        float: inline-end;
+        top: 30%;
+    }
+</style>
+</head>
+<body>
+    <div id="field" onclick="moveBall(event)">
+        <div id="square" class="el_field">
+            <div id="lil_square" class="el_field"></div>
+            <div id="lil_square2" class="el_field"></div>
+            <div id="lin" class="el_field"></div>
+            <div id="circle" class="el_field"></div>
+            <div id="big_square" class="el_field"></div>
+            <div id="big_square2" class="el_field"></div>    
+        </div>
+
+        <div id="ball"></div>
+    </div>
+
+    <script>
+        function moveBall(event) {
+            var ball = document.getElementById('ball');
+            ball.style.left = event.clientX - ball.offsetWidth / 2 + 'px'
+            ball.style.top = event.clientY - ball.offsetHeight / 2 + 'px'
+        }
+    </script>
+</body>
+</html>
