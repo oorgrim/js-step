@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин книг</title>
+</head>
+<body>
+    <h1>Магазин книг</h1>
+    <form id="orderForm">
+        <label for="bookSelect">Выберите книгу:</label><br>
+        <select id="bookSelect" name="bookSelect">
+            <option value="book1">Книга 1</option>
+            <option value="book2">Книга 2</option>
+            <option value="book3">Книга 3</option>
+        </select><br>
+        
+        <label for="quantity">Количество экземпляров:</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+
+        <label for="name">Ваше имя:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="deliveryDate">Дата доставки:</label><br>
+        <input type="date" id="deliveryDate" name="deliveryDate"><br>
+
+        <label for="deliveryAddress">Адрес доставки:</label><br>
+        <input type="text" id="deliveryAddress" name="deliveryAddress"><br>
+
+        <label for="comment">Комментарий:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+
+        <input type="submit" value="Заказать">
+    </form>
+
+    <div id="orderConfirmation"></div>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const selectedBook = document.getElementById('bookSelect').value;
+            const quantity = document.getElementById('quantity').value;
+            const name = document.getElementById('name').value;
+            const deliveryDate = document.getElementById('deliveryDate').value;
+            const deliveryAddress = document.getElementById('deliveryAddress').value;
+            const comment = document.getElementById('comment').value;
+
+            const orderConfirmation = document.getElementById('orderConfirmation');
+            orderConfirmation.innerHTML = name + ', спасибо за заказ. ' + quantity + ' экземпляр(ов) книги "' + selectedBook + '" будет доставлен ' + deliveryDate + ' по адресу: ' + deliveryAddress + '.<br>';
+            orderConfirmation.innerHTML += 'Комментарий: ' + comment;
+        });
+    </script>
+</body>
+</html>

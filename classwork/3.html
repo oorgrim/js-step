@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с формой для стилизованного текста</title>
+    <style>
+        #styledText {
+            margin-top: 20px;
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Введите стилизованный текст</h1>
+    <form id="textForm">
+        <label for="inputText">Введите текст:</label><br>
+        <textarea id="inputText" name="inputText" rows="4" cols="50"></textarea><br>
+        
+        <label for="fontSize">Выберите размер текста:</label><br>
+        <select id="fontSize" name="fontSize">
+            <option value="12">12px</option>
+            <option value="16">16px</option>
+            <option value="20">20px</option>
+            <option value="24">24px</option>
+        </select><br>
+
+        <label for="fontColor">Выберите цвет текста:</label><br>
+        <input type="color" id="fontColor" name="fontColor" value="#000000"><br>
+
+        <input type="checkbox" id="boldCheckbox" name="boldCheckbox">
+        <label for="boldCheckbox">Жирный</label><br>
+
+        <input type="checkbox" id="italicCheckbox" name="italicCheckbox">
+        <label for="italicCheckbox">Курсив</label><br>
+
+        <input type="checkbox" id="underlineCheckbox" name="underlineCheckbox">
+        <label for="underlineCheckbox">Подчеркнутый</label><br>
+
+        <input type="submit" value="Отобразить текст">
+    </form>
+
+    <div id="styledText"></div>
+
+    <script>
+        document.getElementById('textForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const inputText = document.getElementById('inputText').value;
+            const fontSize = document.getElementById('fontSize').value;
+            const fontColor = document.getElementById('fontColor').value;
+            const isBold = document.getElementById('boldCheckbox').checked;
+            const isItalic = document.getElementById('italicCheckbox').checked;
+            const isUnderline = document.getElementById('underlineCheckbox').checked;
+
+            const styledTextElement = document.getElementById('styledText');
+            styledTextElement.innerHTML = inputText;
+            styledTextElement.style.fontSize = fontSize + 'px';
+            styledTextElement.style.color = fontColor;
+            styledTextElement.style.fontWeight = isBold ? 'bold' : 'normal';
+            styledTextElement.style.fontStyle = isItalic ? 'italic' : 'normal';
+            styledTextElement.style.textDecoration = isUnderline ? 'underline' : 'none';
+        });
+    </script>
+</body>
+</html>

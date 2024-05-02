@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест</title>
+</head>
+<body>
+    <h1>Прохождение теста</h1>
+    <form id="quizForm">
+        <p>1. Что такое HTML?</p>
+        <input type="radio" name="question1" value="a"> a) Hyper Text Markup Language<br>
+        <input type="radio" name="question1" value="b"> b) Hyperlinks and Text Markup Language<br>
+        <br>
+        <p>2. Что такое CSS?</p>
+        <input type="radio" name="question2" value="a"> a) Cascading Style Sheets<br>
+        <input type="radio" name="question2" value="b"> b) Computer Style Sheets<br>
+        <br>
+        <input type="submit" value="Отправить">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let correctAnswers = 0;
+
+            const answer1 = document.querySelector('input[name="question1"]:checked');
+            const answer2 = document.querySelector('input[name="question2"]:checked');
+
+            if (answer1 && answer1.value === "a") {
+                correctAnswers++;
+            }
+
+            if (answer2 && answer2.value === "a") {
+                correctAnswers++;
+            }
+
+            document.getElementById('result').innerHTML = 'Количество правильных ответов: ' + correctAnswers;
+        });
+    </script>
+</body>
+</html>
