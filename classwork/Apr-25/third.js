@@ -21,7 +21,7 @@ let products = [
     }
 ]
 
-// const prodWithFinalPrice = products.map(product =>) {
-//     let productWithoutDiscount = 
+const prodWithFinalPrice = products.map(product =>) {
+    let productWithoutDiscount = 
     
-// }
+}
