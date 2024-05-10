@@ -21,11 +21,13 @@
 // request.send();
 
 
-    const smth = new XMLHttpRequest();
+    const request = new XMLHttpRequest();
 
-    smth.open("GET", "https://api.github.com/users/oorgrim")
+    request.open("GET", "https://api.github.com/users/oorgrim")
 
-    smth.onload = () => {
-        console.log(smth);
+    request.onload = () => {
+        console.log(request);
     }
-    smth.send() 
+    request.send() 
+
+    // set amount set interval

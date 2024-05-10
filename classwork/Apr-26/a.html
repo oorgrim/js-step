@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страны и их данные</title>
+</head>
+<body>
+    <div id="countries-container"></div>
+    <script>
+        let request = new XMLHttpRequest();
+        let container = document.getElementById('countries-container');
+
+        request.onreadystatechange = function() {
+                let countries = JSON.parse(this.responseText);
+                countries.forEach(country => {
+                    let namee = country.name.common;
+                    let population = country.population;
+                    let loc = country.region;
+                    let flag = country.flags.png;
+                    let maps = country.maps;
+
+                    let countryDiv = document.createElement('div');
+                    let nameElement = document.createElement('h2');
+                    nameElement.textContent = 'Name: ' + namee;
+                    let populationElement = document.createElement('p');
+                    populationElement.textContent = 'Population: ' + population;
+                    let locElement = document.createElement('p');
+                    locElement.textContent = 'Location: ' + loc;
+                    let flagElement = document.createElement('img');
+                    flagElement.src = flag;
+                    let mapsLink = document.createElement('a');
+                    mapsLink.textContent = 'Show on Map';
+                    mapsLink.href = maps;
+                    mapsLink.target = '_blank';
+
+                    countryDiv.appendChild(nameElement);
+                    countryDiv.appendChild(populationElement);
+                    countryDiv.appendChild(locElement);
+                    countryDiv.appendChild(flagElement);
+                    countryDiv.appendChild(mapsLink);
+                    container.appendChild(countryDiv);
+                });
+            }
+
+        request.open('GET', 'https://restcountries.com/v3.1/all');
+        request.send();
+    </script>
+</body>
+</html>
