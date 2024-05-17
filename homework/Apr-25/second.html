@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2 задание</title>
+<script>
+    function func() {
+        var nick = document.getElementById("username").value
+        var pass = document.getElementById("password").value
+        var nickSymb = /\b[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}\b/
+        var passSymb = /(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{6,}/
+        if (!nickSymb.test(nick)) {
+            alert("вы ввели непраивльный формат почты");
+            return false
+        }
+        if (!passSymb.test(pass)) {
+            alert("ваш пароль должен содержать минимум 6 символов с минимум одной заглавной буквой и одной цифрой")
+            return false
+        }
+        return true
+    }
+</script>
+</head>
+<body>
+    <h2>регистрация</h2>
+    <form onsubmit="return func()">
+        <label for="username">ник в виде почты:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">парль:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="зарегаться">
+    </form>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 задание</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            color: white;
+            transition: background-color 0.5s, color 0.5s;
+
+        }
+
+        .btn_wrapper {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            color: white;
+        }
+
+        .dark {
+            background-color: black;
+        }
+
+        .light {
+            background-color: white;
+            color: black;
+        }
+
+        .colorful {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body class="dark">
+
+<div class="btn_wrapper">
+    <button class="btn dark_btn">Темная тема</button>
+    <button class="btn light_btn">Светлая тема</button>
+    <button class="btn color_btn">Цветная тема</button>
+</div>
+
+<script>
+    const darkBtn = document.querySelector('.dark_btn')
+    const lightBtn = document.querySelector('.light_btn')
+    const btnWColor = document.querySelector('.color_btn')
+
+    darkBtn.addEventListener('click', () => {
+        document.body.className = 'dark'
+        localStorage.setItem('theme', 'dark')
+    })
+
+    lightBtn.addEventListener('click', () => {
+        document.body.className = 'light'
+        localStorage.setItem('theme', 'light')
+    })
+
+    btnWColor.addEventListener('click', () => {
+        document.body.className = 'colorful'
+        localStorage.setItem('theme', 'colorful')
+    })
+
+    let theme = localStorage.getItem('theme')
+    if (theme) {
+        document.body.className = theme
+    }
+</script>
+
+</body>
+</html>
