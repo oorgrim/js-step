@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient(rgb(163, 224, 255), rgb(97, 179, 215));
+    /* background-size: 100vmax; */
+    background-repeat: no-repeat;
+}
+
+#body {
+    height: 100vh;
+}
+
+/* корзиа скроллинги анимация выпадающие мегюшки модальные окна адаптивный сайт */
