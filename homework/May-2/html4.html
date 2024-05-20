@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="books">
+        <div class="book1">
+            <img src="./pics/1book.jpg" width="200px" height="300px">
+            <p style="margin: 2px;"><span style="font-weight: 600;">Learning JavaScript: <br>
+                JavaScript Essentials for<br>
+                Modern Application<br>
+                Development<br></span>
+                Ethan Brown</p>
+            <span style="text-align: right; font-weight: 600; ">16$</span>
+        </div>
+        <div class="book1">
+            <img src="./pics/2book.jpg" width="200px" height="300px">
+            <p style="margin: 2px;"><span style="font-weight: 600;">You Don't Know JS: <br>
+                Scope & Closures<br></span>
+                Kyle Simpson</p>
+            <span style="text-align: right; font-weight: 600; ">20$</span>
+        </div>
+        <div class="book1">
+            <img src="./pics/3book.jpg" width="200px" height="300px">
+            <p style="margin: 2px;"><span style="font-weight: 600;">JavaScript and JQuery: <br>
+                Interactive Front-End<br>
+                Web Development<br></span>
+                Jon Duckett</p>
+            <span style="text-align: right; font-weight: 600; ">22$</span>
+        </div>
+    </div>
+    <div class="order">
+        <div class="param">
+            <span>Book:</span>
+            <select name="books" id="selecting">
+                <option value="book1">Learning JavaScript:</option>
+                <option value="book2">You Don't Know JS:</option>
+                <option value="book3">JavaScript and JQuery:</option>
+            </select>
+        </div>
+        <div class="param">
+            <span>Quantity:</span>
+            <input type="number" id="quan">
+        </div>
+        <div class="param">
+            <span>Name:</span>
+            <input type="text" id="name">
+        </div>
+        <div class="param">
+            <span>Delivery address:</span>
+            <textarea name="address" id="address" cols="20" rows="5"></textarea>
+        </div>
+        <div class="param">
+            <span>Delivery date:</span>
+            <input type="date" id="date">
+        </div>
+        <div class="param">
+            <span>Comment:</span>
+            <textarea name="comment" id="comment" cols="20" rows="5"></textarea>
+        </div>
+        <button id="btn">Buy</button>
+    </div>
+    <div id="result">
+        <h3>Result:</h3>
+        <p id="nameing"></p>
+        <p id="specs"></p>
+    </div>
+    <script src="js4.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style6.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="direction">
+        <span>Direction:</span>
+        <select name="Directions" id="directions">
+            <option value="od_lv">Odessa-Lviv</option>
+            <option value="al_as">Almaty-Astana</option>
+        </select>
+        <span>Date:</span>
+        <input type="date" name="Date" id="date" value="2023-05-13">
+        <button id="search">Search</button>
+    </div>
+    <div class="seats">
+        <div class="first_row">
+            <div><input type="checkbox" id="seat1" value="1">1</div>
+            <div><input type="checkbox" id="seat3" value="3">3</div>
+            <div><input type="checkbox" id="seat5" value="5">5</div>
+            <div><input type="checkbox" id="seat7" value="7">7</div>
+            <div><input type="checkbox" id="seat9" value="9">9</div>
+        </div>
+        <div class="first_row">
+            <div><input type="checkbox" id="seat2" value="2">2</div>
+            <div><input type="checkbox" id="seat4" value="4">4</div>
+            <div><input type="checkbox" id="seat6" value="6">6</div>
+            <div><input type="checkbox" id="seat8" value="8">8</div>
+            <div><input type="checkbox" id="seat10" value="10">10</div>
+        </div>
+        <div id="signed_seats"></div>
+    </div>
+    <div class="price"><span>Total price:</span><span id="tot_price"></span><button id="book_btn">Book</button></div>
+    <div class="tickets">
+        <h2>My tickets:</h2>
+        <div class="grd">
+            <div class="row1" style="margin: 5px;">Direction</div>
+            <div class="row1" style="margin: 5px;">Date</div>
+            <div class="row1" style="margin: 5px;">Seat</div>
+            <div class="row2" style="margin: 5px;"><span id="res_direction1"></span></div>
+            <div class="row2" style="margin: 5px;"><span id="res_date1"></span></div>
+            <div class="row2" style="margin: 5px;"><span id="res_seat1"></span></div>
+            <div class="row3" style="margin: 5px;"><span id="res_direction2"></span></div>
+            <div class="row3" style="margin: 5px;"><span id="res_date2"></span></div>
+            <div class="row3" style="margin: 5px;"><span id="res_seat2"></span></div>
+        </div>
+    </div>
+    <script src="js6.js"></script>
+</body>
+</html>
