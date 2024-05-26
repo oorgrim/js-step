@@ -1,0 +1,23 @@
+body {
+    /* background-image: url(fon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    width: 100vw; 
+    height: 100vh;
+    /* background-image: url('fon.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-image: url('fonn.png')
+
+}
+
+div {
+    height: 7000px;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    margin-top: 17%;
+    font-size: 100px;
+}

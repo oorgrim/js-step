@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GBIF Maps API Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var map = L.map('map').setView([20, 0], 2);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+        }).addTo(map);
+
+        // Function to fetch data from GBIF Maps API
+        function fetchGBIFData() {
+            var url = "https://api.gbif.org/v2/map/occurrence/density/{z}/{x}/{y}@1x.png?style=classic.point&taxonKey=212"; // Example API endpoint
+            $.ajax({
+                url: url,
+                method: "GET",
+                success: function(data) {
+                    // Process and display the data on the map
+                    processGBIFData(data);
+                },
+                error: function(error) {
+                    console.log("Error fetching data: ", error);
+                }
+            });
+        }
+
+        // Function to process and display the data on the map
+        function processGBIFData(data) {
+            // Add data to the map (this part needs adjustment based on the actual data format)
+            var imageUrl = 'https://api.gbif.org/v2/map/occurrence/density/{z}/{x}/{y}@1x.png?style=classic.point&taxonKey=212';
+            var imageBounds = [[-90, -180], [90, 180]];
+            L.imageOverlay(imageUrl, imageBounds).addTo(map);
+        }
+
+        // Fetch and display GBIF data
+        fetchGBIFData();
+    </script>
+</body>
+</html>
