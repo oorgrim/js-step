@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function get_desc(book) {
+        const { title, author, year } = book
+        return `${title} написана автором ${author} и опуюликована в  ${year}`
+    }
+
+    let book = {
+        title: "Гарри Поттер и ФИлософский Камень",
+        author: "Джоан Роулинг",
+        year: 2000,
+        genre: "фэнтэзи",
+        pages: 265
+    }
+
+    console.log(get_desc(book))
+</script>
+</html>

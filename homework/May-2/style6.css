@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    align-items: center;
+}
+.direction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+.seats{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+.first_row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.price{
+    text-align: right;
+    width: 500px;
+    margin-top: 10px;
+}
+#tot_price{
+    padding: 0 30px;
+}
+#signed_seats{
+    margin: 3px;
+    color: red;
+    display: none;
+}
+.grd{
+    display: grid;
+    grid-template: repeat(3, 1fr) / 2fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+}

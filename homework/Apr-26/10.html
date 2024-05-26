@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function to_return(arr, properties) {
+    return arr.map(item => {
+        let newI_item = {};
+        for (let prop of properties) {
+            if (item.hasOwnProperty(prop)) {
+                newI_item[prop] = item[prop]
+            }
+        }
+        return newI_item
+    })
+}
+
+const users = [
+    { name: "Anya Ivanova", age: 30, email: "anya.iv@mail.ru", phone: "111-1111-1111" },
+    { name: "Vanessa Smith", age: 25, email: "jane.smith@gmail.com", phone: "555-555-5556" },
+    { name: "Alina Abdrakhmanova", age: 18, email: "alina.abdr@gmail.com", phone: "333-3333-3333" }
+]
+
+const selected_prop = ["name", "email"]
+const new_us_arr = to_return(users, selected_prop)
+
+console.log(new_us_arr)
+</script>
+</html>
