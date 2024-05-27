@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Skew Effect on Hover</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+        }
+
+        .card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.1s ease-in-out; /* Reduced transition duration */
+            transform-origin: center;
+            background: url('your-image.jpg') no-repeat center center / cover;
+        }
+
+        .content-box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-size: 1.5em;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: transform 0.1s ease-in-out;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cardContainer">
+        <div class="card"></div>
+        <div class="content-box">
+            <p>Content that moves forward on hover</p>
+        </div>
+    </div>
+
+    <script>
+        const container = document.getElementById('cardContainer');
+
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left
+            const y = e.clientY - rect.top
+            const centerX = rect.width / 2
+            const centerY = rect.height / 2
+
+            const deltaX = (x - centerX) / centerX
+            const deltaY = (y - centerY) / centerY
+
+            const skewX = deltaX * 15
+            const skewY = deltaY * 15
+
+            container.querySelector('.card').style.transform = `skew(${skewY}deg, ${skewX}deg)`;
+            container.querySelector('.content-box').style.transform = `translateZ(20px) skew(${skewY}deg, ${skewX}deg)`;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            container.querySelector('.card').style.transform = 'skew(0deg, 0deg)';
+            container.querySelector('.content-box').style.transform = 'translateZ(0) skew(0deg, 0deg)';
+        });
+    </script>
+</body>
+</html>
