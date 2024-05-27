@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="01.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Create new color</h2>
+    <div class="settings">
+        <p style="margin: 10px 0;">Name:</p>
+        <div id="error1">Color can only contain letters</div>
+        <input type="text" style="width: 300px;" id="Name">
+        <p style="margin: 10px 0;">Type:</p>
+        <select name="" id="Type">
+            <option value="RGB">RGB</option>
+            <option value="RGBA">RGBA</option>
+            <option value="HEX">HEX</option>
+        </select>
+        <p style="margin: 10px 0;">Code:</p>
+        <div id="error2"></div>
+        <input type="text" style="width: 300px;" id="Code">
+        <button id="btn" style="width: 308px;">Save</button>
+    </div>
+    <h2>All colors</h2>
+    <div class="colors">
+        <div class="green">
+            <div class="inner"><p class="textinside">YELLOWGREEN <br>RGB <br><b>154,205,50</b></p></div>
+        </div>
+        <div class="cyan">
+            <div class="inner"><p class="textinside">DARKCYAN <br>RGBA <br><b>0,139,139,1</b></p></div>
+        </div>
+        <div class="red">
+            <div class="inner"><p class="textinside">ORANGERED <br>HEX <br><b>#FF4500</b></p></div>
+        </div>
+        <div id="user">
+            <div class="inner"><p class="textinside"><span id="username"></span> <br><span id="usertype"></span> <br><b><span id="usercolor"></span></b></p></div>
+        </div>
+    </div>
+    <script src="01.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.control_pannel{
+    display: grid;
+    grid-template: 1fr /1fr 1fr 4fr;
+    height: 200px;
+    justify-items: center;
+    align-items: center;
+}
+#square{
+    grid-column: 1/2;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+}
+#circle{
+    grid-column: 2/3;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: gray;
+}
+#holst{
+    background-color: bisque;
+    height: 629px;
+}
