@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Search</title>
+</head>
+<body>
+    <h1>University Search</h1>
+    <input type="text" id="universityName" placeholder="Enter university name">
+    <button onclick="searchUniversity()">Search</button>
+    <div id="result"></div>
+
+    <script>let universities = [];
+
+        fetch('world_universities_and_domains.json')
+            .then(response => response.json())
+            .then(data => {
+                universities = data;
+            })
+            .catch(error => console.error('Error loading university data:', error));
+        
+        function searchUniversity() {
+            const name = document.getElementById("universityName").value.toLowerCase();
+            const result = universities.find(university => university.name.toLowerCase() === name);
+        
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = ""; // Очистка предыдущего результата
+        
+            if (result) {
+                resultDiv.innerHTML = `
+                    <h2>${result.name}</h2>
+                    <p><strong>Country:</strong> ${result.country}</p>
+                    <p><strong>State/Province:</strong> ${result["state-province"] || "N/A"}</p>
+                    <p><strong>Web Pages:</strong> ${result.web_pages.map(url => `<a href="${url}" target="_blank">${url}</a>`).join(", ")}</p>
+                    <p><strong>Domains:</strong> ${result.domains.join(", ")}</p>
+                `;
+            } else {
+                resultDiv.innerHTML = "<p>University not found</p>";
+            }
+        }
+        </script>
+</body>
+</html>
