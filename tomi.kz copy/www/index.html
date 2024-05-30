@@ -34,8 +34,8 @@
     <div class="first_page">
         <div class="content">
             <div class="text">
-                <h1 id="h1_menu">Steps with a Shield</h1>
-                <p>Ваш помощник в кибербезопасности</p>
+                <h1 id="h1_menu">Микроорганизмы</h1>
+                <p>и информация о них</p>
             </div>
             <!-- <img src="images/3d.png" alt=""> -->
             <div class="moving_wrapper" id="cardContainerWrap">
@@ -48,49 +48,98 @@
 
     <div class="second_page">
         <div class="text1">
-            <h1 id="text_why">Нужно найти информацию о вирусах, или пополнить БД?</h1>
+            <h1 id="text_why">Нужно найти информацию о <br>вирусах, или пополнить БД?</h1>
             <p class="abt_security_text">
-
                 <button id="openModalBtn">Найти</button>
-
-                <div id="modal" class="modal">
-                  <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Группа инфекций (infrction_name)</h2>
-
-                    <select id="infectionSelect">
-                        <option>Все</option>
-                    </select>
-
-                    <h2>Страна</h2>
-
-                    <select id="countrySelect">
-                        <option>Все</option>
-                    </select>
-
-
-                    <p><strong>Безопасность</strong> в интернете стала важной темой в нашем современном мире цифровых технологий. Интернет предоставляет огромное количество возможностей, но и ряд угроз, которые могут нанести вред нашей конфиденциальности и безопасности. </p>
-                    <p> Чем опасна безопасность в интернете?
-
-                        Существует множество угроз, с которыми мы сталкиваемся в интернете. Одной из основных является угроза потери личной информации. Киберпреступники могут попытаться получить доступ к нашим личным данным, таким как пароли, банковские счета, номера кредитных карт и т.д., и использовать их для мошенничества или кражи.
-                
-                        Вредоносные программы, такие как вирусы, черви и троянские кони, также представляют угрозу безопасности в интернете. Они могут заразить наши компьютеры и устройства, вызвав потерю данных или нанеся вред операционной системе.
-                
-                        Фишинг и социальная инженерия — еще два распространенных способа атаки, когда злоумышленники используют маскировку под доверенные источники, чтобы обмануть пользователей и заставить их раскрыть личные данные или информацию о своих счетах.
-                
-                        Кроме того, интернет также может стать местом для различных форм кибербуллинга, дискриминации и других форм онлайн-нападений, которые могут нанести эмоциональный или психологический вред пользователям.
-                
-                        Заключение
-                
-                        Понимание рисков и угроз, связанных с безопасностью в интернете, является важным шагом к защите себя и своих данных. Регулярное обновление программного обеспечения, использование надежных паролей, осмотрительность при открытии вложений и ссылок, а также обучение о безопасности в сети — все это помогает минимизировать риски и обеспечить безопасное и продуктивное онлайн-присутствие.</p>
-                    <!-- <p>Дополнительную информацию вы можете найти на странице <a href="a1.html">Прочитать статью</a>.</p> -->
-                  </div>
-                </div>
-                        </div>
+            </p>
+        </div>
     </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Основные параметры:</h1>
+            <p></p>
+            <div class="first_column"><div>
+                <h2>Группа инфекций (infection_name)</h2>
+                <select id="infectionGroupSelect">
+                    <option>Все</option>
+                </select>
+            </div>
+    
+            <div>
+                <h2>Страна</h2>
+                <select id="regionSelect">
+                    <option>Все</option>
+                </select>
+            </div>
+    
+            <div>
+                <h2>Город</h2>
+                <select id="citySelect">
+                    <option>Все</option>
+                </select>
+            </div>
+    
+            <div>
+                <h2>Профиль отделения</h2>
+                <select id="branchProfSelect">
+                    <option>Все</option>
+                </select>
+            </div>
+        </div>
+        <div class="second_column">
+            <div>
+                <h2>Локализация инфекции</h2>
+                <select id="infLocSelect">
+                    <option>Все</option>
+                </select>
+            </div>
+    
+            <div>
+                <h2>Клинический материал</h2>
+                <select id="clinMatSelect">
+                    <option>Все</option>
+                </select>
+            </div>
+    
+            <div>
+                <h2>Период</h2>
+                <select id="periodSelect">
+                    <option>Все</option>
+                </select>
+            </div>
+    
+            <div>
+                <h2>Возраст</h2>
+                <select id="ageSelect">
+                    <option>Все</option>
+                </select>
+            </div>
+        </div>
+    <div class="third_column">
+            <div>
+                <h2>Группа микроорганизмов</h2>
+                <select id="microorgGroupSelect">
+                    <option>Все</option>
+                </select>
+            </div>
+    
+            <div>
+                <h2>Микроорганизм</h2>
+                <select id="microorgNameSelect">
+                    <option>Все</option>
+                </select>
+            </div>
+            <button>Отобразить ТОП-10</button>
+        </div>
+        
+    </div>
+</div>
 
+    
     <div class="third_page">
-        <h1>советы по защите себя:</h1>
+        <h1>смысл знать о микроорганизмах?</h1>
         <div class="advices">
             <div class="advice_element">
                 <img src="images/advice_1.png" alt="">
@@ -123,7 +172,7 @@
             </div>
             
             <div class="advice_element">
-                <img src="images/advice_6.png" alt="">
+                <img src="images/advice_7.png" alt="">
                 <h1>Используйте двухфакторную аутентификацию</h1>
                 <p align="center">Если это возможно, включите двухфакторную аутентификацию для своих финансовых аккаунтов. Это добавит дополнительный слой защиты, требуя подтверждение вашей личности через дополнительный код или устройство.</p>
             </div>
@@ -169,33 +218,7 @@
             </aside>
         </main>
     </div>
-    <div class="fifth_page">
-        <div class="cont5">
-        <h1>ЗАШИФРУЙ СВОЙ ТЕКСТ ЗДЕСЬ!</h1>
-        <p>Выберите метод шифрования:</p>
-        <label class="enc">
-            <input type="radio" name="enc" value="caesar">
-            Шифр Цезаря
-        </label>
-        <label class="enc">
-            <input type="radio" name="enc" value="atbash">
-            Шифр Атбаш
-        </label>
-        <label class="enc">
-            <input type="radio" name="enc" value="binary">
-            Побитовый шифр
-        </label>
-        <label class="enc">
-            <input type="radio" name="enc" value="morse">
-            Морзе
-        </label>
-        <p>Введите текст:</p>
-        <textarea id="textInput" cols="70" rows="10"></textarea>
-        <p><button class="btn_cipher" onclick="zashifr()">Зашифровать</button></p>
-        <p>Зашифрованный текст:</p>
-        <textarea id="outputText" cols="70" rows="10" readonly></textarea>
-    </div>
-    </div>
+
 
     <div id="nadezhn"><center><h1>Надежный пароль</h1></center></div>
     <div class="container5">
@@ -234,187 +257,34 @@
         </div>
     </div>
     
-    </div>
-
-    <div class="sixth_page">
-        <h1>Генератор паролей</h1>
-        <div class="form">
-        <label class="genstr">
-        <label for="length">Длина пароля:</label>
-        <input type="number" id="length" value="12">
-        </label>
-        <br><br>
-        <label class="genstr">
-        <input type="checkbox" id="uppercase" checked>
-        <label for="uppercase">Наличие высокого регистра:</label>
-        </label>
-        <label class="genstr">
-        <input type="checkbox" id="numbers" checked>
-        <label for="numbers">Наличие цифр:</label>
-        </label>
-        <label class="genstr">
-        <input type="checkbox" id="symbols" checked>
-        <label for="symbols">Наличие символов   :</label>
-        </label>
-        </label>
-        <br><br>
-        <label class="genstr">
-        <input type="text" id="password" readonly>
-        <br><br>
-        <button class="btn_cipher" id="btn_gen" onclick="generatePass()">Сгенерировать пароль</button>
-        </label>
-    </div>
-    </div>
-    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Логотип">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-contacts">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Все права защищены</p>
+        </div>
+    </footer>
     
 </body>
-<script src="scripts/script.js"></script>
+<script src="scripts/search.js"></script>
+<script src="scripts/modal_win.js"></script>
+<script src="scripts/virus_anim.js"></script>
 <script>
-
-var modal1 = document.getElementById("modal1");
-var modal2 = document.getElementById("modal2");
-var btn1 = document.getElementById("openModal1Btn");
-var btn2 = document.getElementById("openModal2Btn");
-
-var close1 = modal1.querySelector(".close");
-var close2 = modal2.querySelector(".close");
-
-btn1.onclick = function() {
-    modal1.style.display = "block";
-}
-
-btn2.onclick = function() {
-    modal2.style.display = "block";
-}
-
-close1.onclick = function() {
-    modal1.style.display = "none";
-}
-
-close2.onclick = function() {
-    modal2.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal1) {
-        modal1.style.display = "none";
-    }
-    if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
-}
-
-var modal = document.getElementById("modal");
-
-var btn = document.getElementById("openModalBtn");
-
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-function caesarCipher(text, shift) {
-    return text.replace(/[а-яёА-ЯЁ]/g, function(char) { //первач и последняя буквы
-        var code = char.charCodeAt(0)
-        var offset = code>= 1040 && code <= 1071 ? 1040 : code >= 1072 && code <= 1103 ? 1072 : code
-        return String.fromCharCode(((code - offset + shift) % 32) + offset)
-    })
-}
-
-function atbashCipher(text) {
-    return text.replace(/[а-яА-Я]/g, function(char) {
-        var code = char.charCodeAt(0)
-        var base =code>= 1040 && code <= 1071 ? 1040: code >= 1072 && code <= 1103 ? 1072 : code
-        return String.fromCharCode((31 -(code-base)) +base)
-    });
-}
-
-function binaryCipher(text) {
-    return text.split('').map(function(char) {
-        return char.charCodeAt(0).toString(2)
-    }).join(' ')
-}
-
-function morseCipher(text) {
-    var morseAlphabet = {
-        'а': '.-', 'б': '-...', 'в': '.--', 'г': '--.', 'д': '-..', 'е': '.', 'ё': '.', 'ж': '...-', 'з': '--..',
-        'и': '..', 'й': '.---', 'к': '-.-', 'л': '.-..', 'м': '--', 'н': '-.', 'о': '---', 'п': '.--.', 'р': '.-.',
-        'с': '...', 'т': '-', 'у': '..-', 'ф': '..-.', 'х': '....', 'ц': '-.-.', 'ч': '---.', 'ш': '----', 'щ': '--.-',
-        'ъ': '.--.-', 'ы': '-.--', 'ь': '-..-', 'э': '..-..', 'ю': '..--', 'я': '.-.-', ' ': '/'
-    };
-    return text.toLowerCase().split('').map(function(char) {
-        return morseAlphabet[char] || ''
-    }).join(' ')
-}
-
-
-function zashifr() {
-    var textInput = document.getElementById('textInput').value;
-    var enc = document.querySelector('input[name="enc"]:checked').value;
-    var output = ''
-
-    switch(enc) {
-        case 'caesar':
-            var shift = parseInt(prompt("Введите сдвиг (это число от 1 и до 31):"))
-            output = caesarCipher(textInput, shift)
-            break
-        case 'atbash':
-            output = atbashCipher(textInput)
-            break
-        case 'binary':
-            output = binaryCipher(textInput)
-            break
-        case 'morse':
-            output = morseCipher(textInput)
-            break
-        default:
-            output = 'Выбериыте метод шифрования'
-    }
-    document.getElementById('outputText').value = output;
-}
-
-function generatePass() {
-    var length = document.getElementById("length").value
-    var includeUppercase=document.getElementById("uppercase").checked
-    var includeNumbers=document.getElementById("numbers").checked
-    var includeSymbols = document.getElementById("symbols").checked
-
-    var charset = "abcdefghijklmnopqrstuvwxyz"
-    var uppercaseCharset ="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    var numberCharset= "0123456789"
-    var symbolCharset = "!@#$%^&*()_+-=[]{}|;:,.<>?"
-
-    if (includeUppercase) {
-        charset += uppercaseCharset
-    }
-    if (includeNumbers) {
-        charset += numberCharset
-    }
-    if (includeSymbols) {
-        charset += symbolCharset
-    }
-
-    var password = ""
-    for (var i = 0; i < length; i++) {
-        var randomIndex = Math.floor(Math.random() * charset.length)
-        password += charset[randomIndex]
-    }
-
-    document.getElementById("password").value=password
-}
-
-
 </script>
 </html>

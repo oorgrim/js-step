@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Выбор группы инфекций</title>
-</head>
-<body>
-
-<h2>Группа инфекций (infection_name)</h2>
-
-<select id="infectionSelect">
-    <option>Все</option>
-</select>
-
-<select id="countrySelect">
-    <option>Все</option>
-</select>
-
-
-<script>
 fetch('infections.json')
 .then(response => {
     if (!response.ok) {
@@ -52,7 +31,3 @@ fetch('infections.json')
     });
 })
 .catch(error => console.error('Ошибка загрузки данных:', error));
-</script>
-
-</body>
-</html>
