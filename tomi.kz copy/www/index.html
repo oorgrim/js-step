@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steps with a Shield</title>
+    <title>Microorganisms</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adaptiv.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rakkas&display=swap" rel="stylesheet">
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><!-- библиотека для графика -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
@@ -28,14 +29,14 @@
 <body>
     <div class="menu">
         <a href="reg_auth/reg.html">Зарегистрироваться</a>
-        <a href="#yakor">О нас</a>
+        <a id="yakor" href="#yakor">О нас</a>
     </div>
 
     <div class="first_page">
         <div class="content">
             <div class="text">
                 <h1 id="h1_menu">Микроорганизмы</h1>
-                <p>и информация о них</p>
+                <p id="pp">и информация о них</p>
             </div>
             <!-- <img src="images/3d.png" alt=""> -->
             <div class="moving_wrapper" id="cardContainerWrap">
@@ -139,128 +140,109 @@
 
     
     <div class="third_page">
-        <h1>смысл знать о микроорганизмах?</h1>
+        <h1>Зачем нужны микроорганизмы?</h1>
         <div class="advices">
             <div class="advice_element">
                 <img src="images/advice_1.png" alt="">
-                <h1>Используйте облачные сервисы</h1>
-                <p align="center">При выборе облачных сервисов предпочтение следует отдавать проверенным и надежным провайдерам. Они обеспечивают высокий уровень безопасности для ваших данных.</p>
+                <h1>Научные исследования</h1>
+                <p align="center">Исследование микроорганизмов помогает понять основные биологические процессы, такие как метаболизм, клеточный рост и деление.
+                </p>
             </div>
             
             <div class="advice_element">
                 <img src="images/advice_3.png" alt="">
-                <h1>Используйте надежные пароли</h1>
-                <p align="center">Создавайте уникальные пароли для каждого онлайн-аккаунта. Пароли должны быть длинными и содержать комбинацию букв, цифр и специальных символов.</p>
+                <h1>Антибиотики и препараты</h1>
+                <p align="center">Исследование микроорганизмов помогает в создании и улучшении лекарств, борющихся с бактериальными и грибковыми инфекциями.
+                </p>
             </div>
             
             <div class="advice_element">
                 <img src="images/advice_2.png" alt="">
-                <h1>Берегите личные данные</h1>
-                <p align="center">Избегайте предоставления своих личных данных, таких как номера социального страхования или паспорта, если нет необходимости. Будьте особенно осторожны при вводе личной информации на непроверенных сайтах.</p>
+                <h1>Разработка <br> вакцин</h1>
+                <p align="center">Знание о микробах позволяет создавать вакцины, защищающие людей от различных инфекций.
+                </p>
             </div>
             
             <div class="advice_element">
                 <img src="images/advice_6.png" alt="">
-                <h1>Шифруйте конфиденциальные данные</h1>
-                <p align="center">Перед загрузкой конфиденциальных данных в облако убедитесь, что они зашифрованы. Это обеспечит дополнительный уровень защиты от несанкционированного доступа к вашим данным.</p>
+                <h1>Производство <br>пищи</h1>
+                <p align="center">Микроорганизмы играют ключевую роль в производстве йогурта, сыра, вина, хлеба и других ферментированных продуктов.
+                </p>
             </div>
             
             <div class="advice_element">
                 <img src="images/advice_5.png" alt="">
-                <h1>Используйте надежные платежные системы</h1>
-                <p align="center">При совершении онлайн-платежей предпочтительнее использовать платежные системы с хорошей репутацией, такие как PayPal, Apple Pay или Google Pay. Эти системы предоставляют дополнительные слои защиты, такие как проверка подлинности и возможность обратного возврата средств.</p>
+                <h1>Генная <br>инженерия</h1>
+                <p align="center">Микроорганизмы, такие как бактерии и дрожжи, используются как модели для генетических исследований и создания ГМО.
+                </p>
             </div>
             
             <div class="advice_element">
                 <img src="images/advice_7.png" alt="">
-                <h1>Используйте двухфакторную аутентификацию</h1>
-                <p align="center">Если это возможно, включите двухфакторную аутентификацию для своих финансовых аккаунтов. Это добавит дополнительный слой защиты, требуя подтверждение вашей личности через дополнительный код или устройство.</p>
+                <h1>Производство биопродуктов</h1>
+                <p align="center">Микроорганизмы используются для производства биотоплива, биоразлагаемых пластмасс, ферментов и других полезных продуктов.
+                </p>
             </div>
         </div>
     </div>
 
     <div class="fourth_page">
         <h1 id="yakor">Что предоставляет этот сайт?</h1>
-        <h3>На этом сайте вы можете сделать первый шаг на пути защиты себя в интернете - <br> сгенерировать свой личный надежный пароль, а также шифровать!</h3>
-        <!-- <h1>Зачем нужно шифровать данные?</h1>
-
-        <h1>Где использовать шифрование?</h1>
-
-
-        <h1>Виды шифрования:</h1>
-
-        <h1>Но, как это работает?</h1> -->
-
-        <main id="main_cipher">
-            <section class="content_cipher">
-                <h2>Почему шифрование важно?</h2>
-                <p>Шифрование необходимо для защиты конфиденциальной информации от несанкционированного доступа. Оно обеспечивает безопасность данных при передаче по сети и хранении на устройствах.</p>
-                <h2>Где используется шифрование?</h2>
-                <div class="cards">
-                    <div class="card">
-                        <img src="images/computer_security.jpg" alt="">
-                        <p>Компьютерная безопасность</p>
-                    </div>
-                    <div class="card">
-                        <img src="images/financial_transactions.jpg" alt="">
-                        <p>Финансовые транзакции</p>
-                    </div>
-                    <div class="card">
-                        <img src="images/personal_information.jpg" alt="">
-                        <p>Защита персональной информации</p>
-                    </div>
+        <h3>На этом сайте вы можете сделать первый шаг на пути изучения микроорганизмов - <br> посмотреть графики, а также найти нужную информацию!!</h3>
+        <div class="gallery">
+                <div class="card" data-index="0" style="background-image:url('images/estvirusy.webp');"></div>
+                <div class="card" data-index="1" style="background-image:url('images/greasyhands.webp');"></div>
+                <div class="card" data-index="2" style="background-image:url('images/underrice.jpg');"></div>
+                <div class="card" data-index="3" style="background-image:url('images/uzhas.avif');"></div>
+                <div class="card" data-index="4" style="background-image:url('images/probiotiki-bez-moloka-scaled.jpeg');"></div>
+        </div>
+                
+                <div class="box" id="box">
+                    <button class="close">&times;</button>
+                    <button class="prev">&larr;</button> <!-- предыдущее -->
+                    <img class="boxImg" src="" alt="Image">
+                    <button class="next">&rarr;</button><!-- следующее -->
                 </div>
+            
+    
             </section>
-            <aside class="sidebar_cipher">
-                <h3>Виды шифрования:</h3>
-                <p>симметричное и асимметричное</p>
-                <p>Понимание рисков и угроз, связанных с безопасностью в интернете, является важным шагом к защите себя и своих данных, в том числе и шифрование.</p>
-            </aside>
         </main>
     </div>
 
 
-    <div id="nadezhn"><center><h1>Надежный пароль</h1></center></div>
+    <div id="nadezhn"><center><h1>Дополнительная информация</h1></center></div>
     <div class="container5">
         <div class="left-column">
-            <button id="openModal1Btn">Читать о важности пароля</button>
+            <button id="openModal1Btn">Смотреть график популярности</button>
         </div>
         <div class="right-column">
-            <button id="openModal2Btn">Читать о способах взлома</button>
+            <button id="openModal2Btn">Читать правила пользования</button>
         </div>
     </div>
     
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Важность надежного пароля</h2>
-            <p>Надежный пароль - это один из ключевых аспектов безопасности в интернете. Вот почему:</p>
-            <ul>
-                <li><strong>Защита от взлома:</strong> Сильный пароль сложнее взломать методами подбора или атаки словарем.</li>
-                <li><strong>Конфиденциальность данных:</strong> Надежный пароль обеспечивает защиту вашей личной информации и данных.</li>
-                <li><strong>Предотвращение мошенничества:</strong> Хакеры и мошенники могут использовать слабые пароли для несанкционированного доступа к вашим аккаунтам и совершения мошеннических действий.</li>
-                <li><strong>Соблюдение требований безопасности:</strong> Некоторые службы и сайты могут требовать использования надежных паролей для регистрации и доступа к аккаунтам.</li>
-            </ul>
+            <h2>График популярности микроорганизмов</h2> <br><br>
+            <canvas id="popularityChart" width="600" height="400"></canvas>
         </div>
     </div>
     
     <div id="modal2" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Способы взлома слабых паролей</h2>
-            <p>Хакеры и мошенники могут использовать различные методы для взлома аккаунтов из-за слабых паролей, включая:</p>
-            <ol>
-                <li>Атака методом перебора: Программы могут автоматически перебирать множество комбинаций символов, чтобы угадать ваш пароль.</li>
-                <li>Атака методом словаря: Хакеры могут использовать базу данных распространенных паролей для попыток входа в ваш аккаунт.</li>
-            </ol>
-            <p>Используйте надежные пароли и регулярно обновляйте их, чтобы защитить свои аккаунты и личные данные.</p>
+            <ol><p>Если вы хотите найти информацию:</p></ol>
+            <br><br>
+                <li>Нажмите на первую кнопку на сайте</li>
+                <li>Определите критерии</li>
+                <li>Выведите результаты:</li>
+            <p>Также рекомендуем уточнять всю информацию дополнительно для рефератов и тп.</p>
         </div>
     </div>
     
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="logo.png" alt="Логотип">
             </div>
             <div class="footer-links">
                 <ul>
@@ -277,12 +259,14 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Все права защищены</p>
+            <p>&copy; Микроорганизмы 2024</p>
         </div>
     </footer>
     
 </body>
 <script src="scripts/search.js"></script>
+<script src="scripts/gallery.js"></script>
+<script src="scripts/graph_popularity.js"></script>
 <script src="scripts/modal_win.js"></script>
 <script src="scripts/virus_anim.js"></script>
 <script>
